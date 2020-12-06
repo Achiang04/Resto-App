@@ -1,6 +1,7 @@
 import React from 'react';
 import {wp, hp} from '../Responsive/dimen';
-import {View, Text, TextInput, StyleSheet} from 'react-native';
+import {View, Text, TextInput} from 'react-native';
+import styles from './TextBarStyle';
 
 export default function TextBar(props) {
   return (
@@ -16,10 +17,12 @@ export default function TextBar(props) {
     </View>
   );
 }
-const styles = StyleSheet.create({
-  inputan: {
-    borderBottomWidth: 1,
-    width: '90%',
-    marginTop: hp(20),
-  },
-});
+// const styles = StyleSheet.create({
+//   inputan: {
+//     borderBottomWidth: 1,
+//     width: '90%',
+//     marginTop: hp(20),
+//     alignSelf: 'center',
+//     padding: hp(5),
+//   },
+// });

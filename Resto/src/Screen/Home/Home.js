@@ -1,22 +1,11 @@
 import React, {useState} from 'react';
-import {wp, hp} from '../../reusable/Responsive/dimen';
-import {View, Text, StyleSheet} from 'react-native';
-import TextBar from '../../reusable/TextBar/TextBar';
+import {View, Text} from 'react-native';
+import styles from './HomeStyle';
 
 export default function Home() {
   return (
     <View>
-      <Text style={styles.loginText}>Log In</Text>
-      <TextBar ph={'Email'} type={'email-address'} />
-      <TextBar ph={'Password'} secure={true} />
+      <Text style={styles.loginText}>Home</Text>
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  loginText: {
-    alignSelf: 'center',
-    marginTop: hp(70),
-    fontWeight: 'bold',
-  },
-});
