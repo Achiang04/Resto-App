@@ -10,13 +10,20 @@ const styles = StyleSheet.create({
   loginText: {
     alignSelf: 'center',
     marginTop: hp(70),
+    color: 'black',
     fontWeight: 'bold',
     fontSize: RFPercentage(3),
     marginBottom: hp(20),
   },
   forgot: {
     marginRight: wp(20),
-    marginTop: hp(10),
+    marginTop: hp(15),
+  },
+  signUp: {
+    justifyContent: 'flex-end',
+    position: 'absolute',
+    bottom: hp(20),
+    alignSelf: 'center',
   },
 });
 
