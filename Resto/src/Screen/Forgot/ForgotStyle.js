@@ -7,29 +7,19 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#fff',
   },
-  WelcomeText: {
-    alignSelf: 'center',
-    marginTop: hp(70),
+  forgot: {
     fontWeight: 'bold',
     fontSize: RFPercentage(3),
+    alignSelf: 'center',
+    marginTop: hp(70),
+    marginBottom: hp(7),
   },
   text: {
     alignSelf: 'center',
-    fontWeight: 'bold',
-    fontSize: RFPercentage(3),
+    marginBottom: hp(20),
   },
-  text2: {
-    alignSelf: 'center',
-    opacity: 0.7,
-  },
-  regisBtn: {
+  submitBtn: {
     marginTop: hp(20),
-  },
-  login: {
-    justifyContent: 'flex-end',
-    position: 'absolute',
-    bottom: hp(20),
-    alignSelf: 'center',
   },
 });
 
