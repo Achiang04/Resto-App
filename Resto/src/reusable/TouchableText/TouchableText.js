@@ -6,9 +6,7 @@ export default function TouchableText(props) {
   return (
     <View>
       <TouchableOpacity onPress={props.press}>
-        <Text style={[styles.text, {alignSelf: props.align}]}>
-          {props.text}
-        </Text>
+        <Text style={[styles.text]}>{props.text}</Text>
       </TouchableOpacity>
     </View>
   );

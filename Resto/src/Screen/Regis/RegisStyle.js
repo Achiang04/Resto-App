@@ -5,22 +5,26 @@ import {RFPercentage} from 'react-native-responsive-fontsize';
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
   },
-  loginText: {
+  WelcomeText: {
     alignSelf: 'center',
     marginTop: hp(70),
-    color: 'black',
     fontWeight: 'bold',
     fontSize: RFPercentage(3),
-    marginBottom: hp(20),
   },
-  forgot: {
-    marginRight: wp(20),
-    marginTop: hp(15),
-    alignSelf: 'flex-end',
+  text: {
+    alignSelf: 'center',
+    fontWeight: 'bold',
+    fontSize: RFPercentage(3),
   },
-  signUp: {
+  text2: {
+    alignSelf: 'center',
+    opacity: 0.7,
+  },
+  regisBtn: {
+    marginTop: hp(20),
+  },
+  login: {
     justifyContent: 'flex-end',
     position: 'absolute',
     bottom: hp(20),
