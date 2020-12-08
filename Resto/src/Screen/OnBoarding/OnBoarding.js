@@ -1,58 +1,101 @@
-// import React from 'react';
-// import {View, Text, Alert} from 'react-native';
-// import AppIntro from 'react-native-app-intro';
+import React from 'react';
+import {View, Text, Image} from 'react-native';
+import Ionicons from 'react-native-vector-icons/Ionicons';
+import AppIntroSlider from 'react-native-app-intro-slider';
+import styles from './OnBoardingStyle';
+import {RFPercentage} from 'react-native-responsive-fontsize';
 
-// export default function OnBoarding() {
-//   const onSkipBtnHandle = (index) => {
-//     Alert.alert('Skip');
-//     console.log(index);
-//   };
-//   const doneBtnHandle = () => {
-//     Alert.alert('Done');
-//   };
-//   const nextBtnHandle = (index) => {
-//     Alert.alert('Next');
-//     console.log(index);
-//   };
-//   const onSlideChangeHandle = (index, total) => {
-//     console.log(index, total);
-//   };
-//   const pageArray = [
-//     {
-//       title: 'Page 1',
-//       description: 'Description 1',
-//       img: '../../assets/image/1.jpg',
-//       imgStyle: {
-//         height: 80 * 2.5,
-//         width: 109 * 2.5,
-//       },
-//       backgroundColor: '#fa931d',
-//       fontColor: '#fff',
-//       level: 10,
-//     },
-//     {
-//       title: 'Page 2',
-//       description: 'Description 2',
-//       img: require('../../assets/image/2.jpeg'),
-//       imgStyle: {
-//         height: 93 * 2.5,
-//         width: 103 * 2.5,
-//       },
-//       backgroundColor: '#a4b602',
-//       fontColor: '#fff',
-//       level: 10,
-//     },
-//   ];
-//   return (
-//     <View>
-//       <Text>intro</Text>
-//       <AppIntro
-//         onNextBtnClick={nextBtnHandle}
-//         onDoneBtnClick={doneBtnHandle}
-//         onSkipBtnClick={onSkipBtnHandle}
-//         onSlideChange={onSlideChangeHandle}
-//         pageArray={pageArray}
-//       />
-//     </View>
-//   );
-// }
+const slides = [
+  {
+    key: '1',
+    text: 'Quick Search',
+    text2: 'Set your location to start exploring',
+    text3: 'restaurants around you',
+    image: require('../../assets/image/1.jpg'),
+  },
+  {
+    key: '2',
+    text: 'Variety of food',
+    text2: 'Set your location to start exploring',
+    text3: 'restaurants around you',
+    image: require('../../assets/image/2.jpeg'),
+  },
+  {
+    key: '3',
+    text: 'Search for a place',
+    text2: 'Set your location to start exploring',
+    text3: 'restaurants around you',
+    image: require('../../assets/image/3.jpeg'),
+  },
+  {
+    key: '4',
+    text: 'Fast shipping',
+    text2: 'Set your location to start exploring',
+    text3: 'restaurants around you',
+    image: require('../../assets/image/4.jpeg'),
+  },
+];
+
+export default function OnBoarding({navigation}) {
+  const renderItem = ({item}) => {
+    return (
+      <View style={styles.container}>
+        <Image style={styles.image2} source={item.image} />
+        <Text style={styles.search}>{item.text}</Text>
+        <Text style={styles.text}>{item.text2}</Text>
+        <Text style={styles.text}>{item.text3}</Text>
+      </View>
+    );
+  };
+
+  const onDone = () => {
+    navigation.replace('Login');
+  };
+
+  const renderNextButton = () => {
+    return (
+      <View style={styles.buttonCircle}>
+        <Ionicons
+          name="arrow-forward-circle-outline"
+          color="black"
+          size={RFPercentage(3)}
+        />
+      </View>
+    );
+  };
+  const renderDoneButton = () => {
+    return (
+      <View style={styles.buttonCircle}>
+        <Ionicons
+          name="checkmark-circle-outline"
+          color="black"
+          size={RFPercentage(3)}
+        />
+      </View>
+    );
+  };
+  const renderPrevButton = () => {
+    return (
+      <View style={styles.buttonCircle}>
+        <Ionicons
+          name="arrow-back-circle-outline"
+          color="black"
+          size={RFPercentage(3)}
+        />
+      </View>
+    );
+  };
+
+  return (
+    <AppIntroSlider
+      renderItem={renderItem}
+      data={slides}
+      onDone={onDone}
+      activeDotStyle={{backgroundColor: 'rgba(0, 0, 0, .7)'}}
+      showPrevButton={true}
+      renderPrevButton={renderPrevButton}
+      renderDoneButton={renderDoneButton}
+      renderNextButton={renderNextButton}
+    />
+  );
+}

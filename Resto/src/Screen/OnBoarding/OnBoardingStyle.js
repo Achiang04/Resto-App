@@ -6,14 +6,8 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff',
+    // backgroundColor: 'pink',
     // justifyContent: 'center',
-  },
-  image1: {
-    width: wp(300),
-    height: hp(300),
-    alignSelf: 'center',
-    resizeMode: 'contain',
-    marginTop: hp(150),
   },
   image2: {
     width: wp(350),
@@ -21,13 +15,6 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
     resizeMode: 'contain',
     marginTop: hp(150),
-  },
-  image4: {
-    width: wp(350),
-    height: hp(300),
-    alignSelf: 'center',
-    resizeMode: 'contain',
-    marginTop: hp(120),
   },
   search: {
     alignSelf: 'center',
@@ -39,8 +26,13 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     alignSelf: 'center',
   },
-  container2: {
-    marginTop: hp(50),
+  buttonCircle: {
+    width: 40,
+    height: 40,
+    backgroundColor: 'rgba(0, 0, 0, .2)',
+    borderRadius: 20,
+    justifyContent: 'center',
+    alignItems: 'center',
   },
 });
 
